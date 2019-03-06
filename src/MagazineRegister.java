@@ -22,6 +22,8 @@ public class MagazineRegister {
         this.magazineCollection.add(magazine);
     }
 
+    public void removeMagazine(Magazine magazine) {this.magazineCollection.remove(magazine); }
+
     public Iterator<Magazine> getIterator()
     {
         return this.magazineCollection.iterator();
@@ -39,7 +41,7 @@ public class MagazineRegister {
         {
             Magazine magazine = it.next();
 
-            if (magazine.getTitle().contains(title))
+            if (magazine.getTitle().toLowerCase().contains(title))
             {
                 foundMagazine = magazine;
                 found = true;
@@ -47,6 +49,20 @@ public class MagazineRegister {
 
         }
         return foundMagazine;
+    }
+
+
+    public String fillWithDummies() {
+        Magazine dummy1 = new Magazine("fri flyt", 9);
+        this.addMagazine(dummy1);
+        Magazine dummy2 = new Magazine("Se og Hør", 19);
+        this.addMagazine(dummy2);
+        Magazine dummy3 = new Magazine("Vi menn", 23);
+        this.addMagazine(dummy3);
+
+        String message = "Dummies successfully imported";
+
+        return message;
     }
 }
 

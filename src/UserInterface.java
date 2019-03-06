@@ -8,9 +8,11 @@ public class UserInterface {
     // to fit your application (i.e. replace "prodct" with "litterature"
     // etc.
     private String[] menuItems = {
-            "1. List all magazine",
+            "1. List all magazines",
             "2. Add magazine",
             "3. Find a magazine by title",
+            "4. TEST:Fill with dummy magazines",
+            "5. Remove magazine"
     };
 
     private MagazineRegister magazineReg;
@@ -53,6 +55,14 @@ public class UserInterface {
                         break;
 
                     case 4:
+                        magazineReg.fillWithDummies();
+                        break;
+
+                    case 5:
+                        deleteMagazine();
+                        break;
+
+                    case 6:
                         System.out.println("\nThank you for using Application v0.1. Bye!\n");
                         quit = true;
                         break;
@@ -121,11 +131,13 @@ public class UserInterface {
         {
             Magazine magazine = magplistIt.next();
 
-            System.out.println("Title: " + magazine.getTitle()
-                    + " No of issues: " + magazine.getNumberOfYearlyIssues());
+            System.out.println("//#################\\\n"
+                    + "Title: " + magazine.getTitle()
+                    + "\n No of issues: " + magazine.getNumberOfYearlyIssues());
         }
 
     }
+
 
     /**
      * Add a new literature to the register.
@@ -168,14 +180,30 @@ public class UserInterface {
     void findMagazineByTitle()   {
         System.out.println("Enter search word: ");
         Scanner reader = new Scanner(System.in);
-        String title = reader.nextLine();
+        String title = reader.nextLine().toLowerCase();
         Magazine found = this.magazineReg.findMagazineByTitle(title);
-        System.out.println("Search result: " + found.getTitle() + "# of issues" + found.getNumberOfYearlyIssues());
 
-        if (){
+        if (found == null){
             System.out.println("Search result: No magazine found");
+        } else {
+            System.out.println("Search result: " + found.getTitle() + "   # of issues" + found.getNumberOfYearlyIssues());
         }
 
+    }
+
+    void deleteMagazine()
+    {
+        System.out.println("Enter magazine title to delete: ");
+        Scanner reader = new Scanner(System.in);
+        String title = reader.nextLine().toLowerCase();
+        Magazine found = this.magazineReg.findMagazineByTitle(title);
+
+        if (found == null){
+            System.out.println("Search result: No magazine found to delete");
+        } else {
+            System.out.println(found.getTitle() + "was successfully deleted ");
+            magazineReg.removeMagazine(found);
+        }
     }
 
 
