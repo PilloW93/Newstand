@@ -43,7 +43,7 @@ public class Magazine {
 
     //public String getGenre()
     {
-        //2return this.genre;
+        //return this.genre;
     }
 }
 

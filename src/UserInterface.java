@@ -55,7 +55,7 @@ public class UserInterface {
                         break;
 
                     case 4:
-                        magazineReg.fillWithDummies();
+                        fillWithDummies();
                         break;
 
                     case 5:
@@ -124,7 +124,7 @@ public class UserInterface {
     /**
      * Lists all the products/literature in the register
      */
-    void listAllMagazines()
+    private void listAllMagazines()
     {
         Iterator<Magazine> magplistIt = this.magazineReg.getIterator();
         while ( magplistIt.hasNext() )
@@ -149,7 +149,7 @@ public class UserInterface {
      * Remember to also handle invalid input from the
      * user!!
      */
-    void addNewMagazine()
+    private void addNewMagazine()
     {
         // Brukeren har nå valgt å legge til en avis
         System.out.println("Enter title: ");
@@ -177,7 +177,7 @@ public class UserInterface {
      * Then, upon return from the register, you need
      * to print the details of the found item.
      */
-    void findMagazineByTitle()   {
+    private void findMagazineByTitle()   {
         System.out.println("Enter search word: ");
         Scanner reader = new Scanner(System.in);
         String title = reader.nextLine().toLowerCase();
@@ -186,12 +186,12 @@ public class UserInterface {
         if (found == null){
             System.out.println("Search result: No magazine found");
         } else {
-            System.out.println("Search result: " + found.getTitle() + "   # of issues" + found.getNumberOfYearlyIssues());
+            System.out.println("Search result: " + found.getTitle() + "\n   No of issues: " + found.getNumberOfYearlyIssues());
         }
 
     }
 
-    void deleteMagazine()
+    private void deleteMagazine()
     {
         System.out.println("Enter magazine title to delete: ");
         Scanner reader = new Scanner(System.in);
@@ -204,9 +204,14 @@ public class UserInterface {
             System.out.println(found.getTitle() + "was successfully deleted ");
             magazineReg.removeMagazine(found);
         }
+
     }
 
-
+private void fillWithDummies()
+{
+    this.magazineReg.putInDummies();
+    System.out.println("* Dummies successfully added to register *");
+}
 
 
 }
