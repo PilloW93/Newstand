@@ -31,6 +31,10 @@ public class MagazineRegister {
 
     }
 
+    /**
+     * Removes a magazine from the register
+     * @param magazine The magazine to be removed
+     */
     public void removeMagazine(Magazine magazine)
     {this.magazineCollection.remove(magazine); }
 
@@ -39,6 +43,11 @@ public class MagazineRegister {
         return this.magazineCollection.iterator();
     }
 
+    /**
+     * Search function to find magazines by title
+     * @param title Title of the magazine
+     * @return Returns the magazine which has been found, if found.
+     */
 
 
     public Magazine findMagazineByTitle (String title) {
@@ -61,6 +70,9 @@ public class MagazineRegister {
         return foundMagazine;
     }
 
+    /**
+     * Fills the register with dummies (FOR TESTING ONLY)
+     */
 
     public void putInDummies() {
         Magazine dummy1 = new Magazine("fri flyt", 9);
@@ -71,7 +83,12 @@ public class MagazineRegister {
         this.addMagazine(dummy3);
     }
 
-    // Function to remove duplicates from an ArrayList
+    /**
+     * Function to check for duplicates in the register
+      * @param title Title of the magazine
+     * @return Returns true if duplicate is found, otherwise false.
+     */
+
     public boolean noDuplicates(String title)
     {
         Magazine magazine = findMagazineByTitle(title);

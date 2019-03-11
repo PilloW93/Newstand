@@ -1,4 +1,12 @@
-import java.util.ArrayList;
+/**
+ * Makes up the user interface (text based) of the application.
+ * Responsible for all user interaction, like displaying the menu
+ * and receiving input from the user.
+ *
+ * @author PilloW
+ * @version 0.3
+ */
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Iterator;
@@ -97,7 +105,7 @@ public class UserInterface {
         {
             System.out.println(menuItem);
         }
-        //int maxMenuItemNumber = menuItems.length + 1;
+        int maxMenuItemNumber = menuItems.length + 1;
         // Add the "Exit"-choice to the menu
         System.out.println(maxMenuItemNumber + ". Exit\n");
         System.out.println("Please choose menu item (1-" + maxMenuItemNumber + "): ");
@@ -150,36 +158,35 @@ public class UserInterface {
 
 
     /**
-     * Add a new literature to the register.
-     * In this method you have to add code to ask the
-     * user for the necessary information you need to
-     * create an instance of the product, which you
-     * then send as a parameter to the addNewspaper()-
-     * method of the register.
-     * Remember to also handle invalid input from the
-     * user!!
+     * Adds a new literature to the register by input from user
+     * Check for duplicates, if duplicate found no add.
+     * @param title Title of the magazine
+     * @param numberOfIssuePrYear The issue number of the magazine
      */
     private void addNewMagazine()
     {
-        // Brukeren har nå valgt å legge til en avis
+        // User have chosen to add a Magazine
         System.out.println("Enter title: ");
         Scanner reader = new Scanner(System.in);
         String title = reader.nextLine();
 
         System.out.println("Please enter the number of issues: ");
         int numberOfIssuesPrYear = reader.nextInt();
-        // Legg inn avisa i registeret
+        /* Adds magazine to the register */
         Magazine magazine = new Magazine(title, numberOfIssuesPrYear);
-        boolean wasAdded = this.magazineReg.addMagazine(magazine);
 
+        /* Check if it has already been added */
+        boolean wasAdded = this.magazineReg.addMagazine(magazine);
+        //If it gets added (no duplicates) print message.
         if (wasAdded) {
             System.out.println("Magazine successfully added with title: " +
                     title +
                     " and number of issue: "
                     + numberOfIssuesPrYear);
         }
+        // if it doesn't get added (because there is duplicate in register) print message:
       else {
-            System.out.println("Magazine is already excisting, please try a different one");
+            System.out.println("Magazine is already existing, please try a different one");
         }
 
     }
@@ -206,7 +213,10 @@ public class UserInterface {
         }
 
     }
-
+    /**
+     * Removes a magazine to the register by input from user
+     * by input from user.
+     */
     private void deleteMagazine()
     {
         System.out.println("Enter magazine title to delete: ");
@@ -222,6 +232,11 @@ public class UserInterface {
         }
 
     }
+
+    /**
+     * Fills the register with dummy magazines (FOR TESTING ONLY)
+     * Prints message to confirm that dummies are added.
+     */
 
 private void fillWithDummies()
 {
