@@ -1,6 +1,8 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Iterator;
+
 
 public class UserInterface {
 
@@ -123,9 +125,13 @@ public class UserInterface {
 
     /**
      * Lists all the products/literature in the register
+     * checks if register is empty, and if it is prints error.
      */
     private void listAllMagazines()
     {
+        int magazineCount = magazineReg.magazineCollection.size();
+        System.out.println("There is a total of: " + magazineCount + " magazines in the register");
+
         Iterator<Magazine> magplistIt = this.magazineReg.getIterator();
         while ( magplistIt.hasNext() )
         {
@@ -134,6 +140,10 @@ public class UserInterface {
             System.out.println("//#################\\\n"
                     + "Title: " + magazine.getTitle()
                     + "\n No of issues: " + magazine.getNumberOfYearlyIssues());
+        }
+
+        if (! magplistIt.hasNext()) {
+            System.out.println("\"//#################\\\n" + "* No/ no more magazines in the register *");
         }
 
     }
@@ -160,11 +170,17 @@ public class UserInterface {
         int numberOfIssuesPrYear = reader.nextInt();
         // Legg inn avisa i registeret
         Magazine magazine = new Magazine(title, numberOfIssuesPrYear);
-        this.magazineReg.addMagazine(magazine);
-        System.out.println("Magazine successfully added with title: " +
-                title +
-                " and number of issue: "
-                + numberOfIssuesPrYear);
+        boolean wasAdded = this.magazineReg.addMagazine(magazine);
+
+        if (wasAdded) {
+            System.out.println("Magazine successfully added with title: " +
+                    title +
+                    " and number of issue: "
+                    + numberOfIssuesPrYear);
+        }
+      else {
+            System.out.println("Magazine is already excisting, please try a different one");
+        }
 
     }
 
@@ -201,7 +217,7 @@ public class UserInterface {
         if (found == null){
             System.out.println("Search result: No magazine found to delete");
         } else {
-            System.out.println(found.getTitle() + "was successfully deleted ");
+            System.out.println(found.getTitle() + " was successfully deleted ");
             magazineReg.removeMagazine(found);
         }
 

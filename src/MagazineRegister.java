@@ -17,12 +17,22 @@ public class MagazineRegister {
      * Adds a magazine to the magazine register.
      * @param magazine The magazine to add to the register
      */
-    public void addMagazine(Magazine magazine)
+    public boolean addMagazine(Magazine magazine)
     {
-        this.magazineCollection.add(magazine);
+        boolean excisting = noDuplicates(magazine.getTitle());
+        boolean wasAdded = false;
+
+        if(!excisting){
+            this.magazineCollection.add(magazine);
+            wasAdded = true;
+        }
+
+        return wasAdded;
+
     }
 
-    public void removeMagazine(Magazine magazine) {this.magazineCollection.remove(magazine); }
+    public void removeMagazine(Magazine magazine)
+    {this.magazineCollection.remove(magazine); }
 
     public Iterator<Magazine> getIterator()
     {
@@ -41,7 +51,7 @@ public class MagazineRegister {
         {
             Magazine magazine = it.next();
 
-            if (magazine.getTitle().toLowerCase().contains(title))
+            if (magazine.getTitle().toLowerCase().equals(title.toLowerCase()))
             {
                 foundMagazine = magazine;
                 found = true;
@@ -59,6 +69,21 @@ public class MagazineRegister {
         this.addMagazine(dummy2);
         Magazine dummy3 = new Magazine("Vi menn", 23);
         this.addMagazine(dummy3);
+    }
+
+    // Function to remove duplicates from an ArrayList
+    public boolean noDuplicates(String title)
+    {
+        Magazine magazine = findMagazineByTitle(title);
+        boolean result = false;
+
+        if ( magazine != null) {
+            result = true;
+        }
+
+        return result;
+
+
     }
 }
 
