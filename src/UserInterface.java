@@ -91,7 +91,7 @@ public class UserInterface {
      */
     private int showMenu() throws InputMismatchException
     {
-        System.out.println("\n**** Application v0.2 ****\n");
+        //System.out.println("\n**** Application v0.2 ****\n");
         // Display the menu
         for ( String menuItem : menuItems )
         {
