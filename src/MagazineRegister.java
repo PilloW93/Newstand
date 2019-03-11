@@ -1,6 +1,14 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ *Creates an instance of MagazineRegister
+ * Using an arraylist
+ *
+ * @author PilloW
+ * @version 0.3
+ */
+
 public class MagazineRegister {
     ArrayList<Magazine> magazineCollection;
 
