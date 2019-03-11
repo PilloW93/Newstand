@@ -73,7 +73,7 @@ public class UserInterface {
                         break;
 
                     case 6:
-                        System.out.println("\nThank you for using Application v0.1. Bye!\n");
+                        System.out.println("\nThank you for using Application v0.3. Bye!\n");
                         quit = true;
                         break;
 
@@ -99,7 +99,7 @@ public class UserInterface {
      */
     private int showMenu() throws InputMismatchException
     {
-        //System.out.println("\n**** Application v0.2 ****\n");
+        System.out.println("\n**** Application v0.3 ****\n");
         // Display the menu
         for ( String menuItem : menuItems )
         {
@@ -151,7 +151,7 @@ public class UserInterface {
         }
 
         if (! magplistIt.hasNext()) {
-            System.out.println("\"//#################\\\n" + "* No/ no more magazines in the register *");
+            System.out.println("#################\n" + "* No/ no more magazines in the register *");
         }
 
     }

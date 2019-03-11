@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ab0017-cfa6-48ba-8882-edace8d97e51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/MagazineRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MagazineRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Magazine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+            <state relative-caret-position="165">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="e#736#737#0" expanded="true" />
                 <element signature="e#769#770#0" expanded="true" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8295">
-              <caret line="237" column="56" selection-start-line="237" selection-start-column="56" selection-end-line="237" selection-end-column="56" />
+            <state relative-caret-position="2134">
+              <caret line="160" column="63" lean-forward="true" selection-start-line="160" selection-start-column="63" selection-end-line="160" selection-end-column="63" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -78,6 +77,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>application v0</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -86,8 +90,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Magazine.java" />
-        <option value="$PROJECT_DIR$/src/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/MagazineRegister.java" />
+        <option value="$PROJECT_DIR$/src/UserInterface.java" />
       </list>
     </option>
   </component>
@@ -126,7 +130,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552303603380" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552304112206" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -181,22 +185,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38285000" />
+    <option name="totallyTimeSpent" value="38793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2015" height="1308" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49876237" visible="true" weight="0.19130434" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988399" visible="true" weight="0.19130434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info active="true" id="Favorites" order="6" sideWeight="0.50123763" side_tool="true" visible="true" weight="0.19130434" />
+      <window_info id="Favorites" order="6" sideWeight="0.5011601" side_tool="true" visible="true" weight="0.19130434" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956523" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2973913" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2504348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39565217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -253,21 +257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8295">
-          <caret line="237" column="56" selection-start-line="237" selection-start-column="56" selection-end-line="237" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3775#3776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MagazineRegister.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
@@ -291,11 +280,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Magazine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="165">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding>
             <element signature="e#736#737#0" expanded="true" />
             <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="160" column="63" lean-forward="true" selection-start-line="160" selection-start-column="63" selection-end-line="160" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#3720#3721#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
           </folding>
         </state>
       </provider>
